@@ -96,6 +96,7 @@ define([
         svg: true,
         mml: true,
         png: true,
+        brief: true,
         description: true
       });
       if (typeof(App.user) != "undefined") {

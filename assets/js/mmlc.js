@@ -90,6 +90,9 @@ $('body').ready( function() {
 				case "description":
 					$("#output-text").html(component.source);
 					break;
+				case "brief":
+					$("#output-text").html(component.source);
+					break;
 				default:
 					//mathml.
 					$("#output-mathml").empty();

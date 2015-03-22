@@ -19,7 +19,7 @@ module.exports = {
 		//We need to know what kind of output you want.
         var outputFormat = req.body.outputFormat || req.query.outputFormat;
 		console.log("*** outputFormat = ", outputFormat);
-		if (typeof(outputFormat) == "undefined" || !outputFormat in ['svg', 'png', 'description', 'mml']) {
+		if (typeof(outputFormat) == "undefined" || !outputFormat in ['svg', 'png', 'description', 'brief', 'mml']) {
 			return res.badRequest(error_responses["missing_format"]);	
 		}
 		var options = {};

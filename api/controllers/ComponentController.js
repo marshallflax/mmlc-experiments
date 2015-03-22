@@ -31,6 +31,9 @@ module.exports = {
               	case 'description':
               		res.send(component.source);
               		break;
+              	case 'brief':
+              		res.send(component.source);
+              		break;
               	default:
               		//Er, this would be a problem.
 					res.notFound({ errorCode: "30", message: "Component not found: " + componentId });

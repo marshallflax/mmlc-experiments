@@ -17,7 +17,7 @@ module.exports = {
     outputFormat: {
         type: 'string',
         required: true,
-        enum: ['svg', 'png', 'description', 'mml']
+        enum: ['svg', 'png', 'description', 'brief', 'mml']
     },
     equations: {
     	collection: 'equation',

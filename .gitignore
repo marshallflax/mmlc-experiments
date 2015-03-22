@@ -4,4 +4,6 @@ node_modules/
 secrets.yaml
 keys/
 config/local.js
-config/env/
+config/env/redis-2.8.17
+redis-2.8.17.tar.gz
+redis-2.8.17/

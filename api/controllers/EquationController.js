@@ -21,6 +21,7 @@ module.exports = {
 		options.png = req.param('png');
 		options.mml = req.param('mml');
 		options.speakText = req.param('description');
+		options.speakBrief = req.param('brief');
 
 		//Do some basic checking on mathml input.
 		if (options.format == "MathML" && !options.math.indexOf("<math") == 0) 
@@ -59,6 +60,9 @@ module.exports = {
 				switch (component.format) {
 					case "description":
 						options.speakText = true;
+						break;
+					case "brief":
+						options.speakBrief = true;
 						break;
 					case "mml":
 						options.mml = true;

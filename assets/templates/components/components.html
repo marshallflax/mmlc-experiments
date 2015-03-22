@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <% var formats = ['description', 'png', 'svg', 'mml']; %>
+        <% var formats = ['description', 'brief', 'png', 'svg', 'mml']; %>
         <% _.each(formats, function(format) { 
             var component = components.findWhere({format: format});
             if (typeof(component) != "undefined") { %>

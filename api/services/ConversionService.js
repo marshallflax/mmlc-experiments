@@ -15,6 +15,7 @@ module.exports = {
                         EquationService.createComponent("png", pngSource, equation.id);
                     } 
                     if (options.speakText) EquationService.createComponent("description", data.speakText, equation.id);
+                    if (options.speakText || options.speakBrief) EquationService.createComponent("brief", data.speakText, equation.id);
                     //Look up equation so that we have all created info.
                     Equation.findOne(equation.id).populate('components').exec(function(err, newEquation) {
                         newEquation.cloudUrl = "https://" + host + "/equation/" + equation.id;
@@ -93,6 +94,7 @@ module.exports = {
                                             EquationService.createComponent(html5.outputFormat, equation.outputJax, dbEquation.id);
                                             if (typeof(equation.speakText) != "undefined") {
                                                 EquationService.createComponent("description", equation.speakText, dbEquation.id);
+                                                EquationService.createComponent("brief", equation.speakText, dbEquation.id);
                                             }
                                             if (window.document.getElementById(equation.inputID) != null) {
                                                 var domEquation = window.document.getElementById(equation.inputID);
